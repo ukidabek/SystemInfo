@@ -75,11 +75,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SystemInfo\SystemInfo.csproj">
-      <Project>{bb070b0e-6948-4a64-9e4c-616ac7137200}</Project>
-      <Name>SystemInfo</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
