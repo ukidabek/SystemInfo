@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace SystemInfoClient
 {
-    static class Program
+    static class SystemInfoClient
     {
         /// <summary>
         /// Główny punkt wejścia dla aplikacji.
@@ -16,7 +16,7 @@ namespace SystemInfoClient
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Main());
         }
     }
 }
