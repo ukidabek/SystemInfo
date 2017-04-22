@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Management;
 
 namespace SystemInfo
@@ -12,6 +8,7 @@ namespace SystemInfo
         protected abstract string ComponentCode { get; }
 
         private ManagementClass managementClass = null;
+
         protected ManagementClass ManagementClass
         {
             get
@@ -26,6 +23,7 @@ namespace SystemInfo
         }
 
         protected List<SystemComponent> _componets = new List<SystemComponent>();
+
         public List<SystemComponent> Componets
         {
             get { return _componets; }

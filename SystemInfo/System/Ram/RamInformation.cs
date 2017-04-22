@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Management;
-
 
 namespace SystemInfo
 {
     [Serializable]
-    public class MotherboardInformation : SystemComponentInformation
+    public class RamInformation : SystemComponentInformation
     {
-        protected override string ComponentCode { get { return "Win32_BaseBoard"; } }
+        protected override string ComponentCode { get { return "Win32_PhysicalMemory"; } }
 
         public override string Informatioin
         {
@@ -23,17 +18,26 @@ namespace SystemInfo
                     information += _componets[i].Informatioin;
                 }
 
-                return information;
+                return string.Format("{1}GB of {2} runing at {3}Mhz\r\n{0} ", information, _totalCapacity, _type, _speed);
             }
         }
+
+        private RamType _type = RamType.Unknown;
+
+        private float _totalCapacity = 0f;
+
+        private long _speed = 10000000;
 
         protected override void GetComponet()
         {
             ManagementObjectCollection managmentObjects = ManagementClass.GetInstances();
             foreach (ManagementObject item in managmentObjects)
             {
-                Motherboard mbo = new Motherboard(item);
-                _componets.Add(mbo);
+                Ram ram = new Ram(item);
+                _type = ram.Type;
+                _totalCapacity += ram.Capacity;
+                _speed = ram.Speed < _speed ? ram.Speed : _speed;
+                _componets.Add(ram);
             }
         }
     }

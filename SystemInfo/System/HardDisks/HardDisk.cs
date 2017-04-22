@@ -1,22 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Management;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SystemInfo
 {
     [Serializable]
-    class HardDisk : SystemComponent
+    internal class HardDisk : SystemComponent
     {
         private string _model = string.Empty;
+
         public string Model
         {
             get { return _model; }
         }
 
         private float _size = 0f;
+
         public float Size
         {
             get { return _size; }

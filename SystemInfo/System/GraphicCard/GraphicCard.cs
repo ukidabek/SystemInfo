@@ -1,28 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Management;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SystemInfo
 {
     [Serializable]
-    class GraphicCard : SystemComponent
+    internal class GraphicCard : SystemComponent
     {
         private string _manufacturer = string.Empty;
+
         public string Manufacturer
         {
             get { return _manufacturer; }
         }
 
         private string _model = string.Empty;
+
         public string Model
         {
             get { return _model; }
         }
 
         private float _memory = 0;
+
         public float Memory
         {
             get { return _memory; }

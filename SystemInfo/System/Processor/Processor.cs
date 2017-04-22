@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Management;
 
 namespace SystemInfo
@@ -11,24 +7,28 @@ namespace SystemInfo
     public class Processor : SystemComponent
     {
         private string _deviceID = string.Empty;
+
         public string DeviceID
         {
             get { return _deviceID; }
         }
 
         private string _specyfikation = string.Empty;
+
         public string Specyfikation
         {
             get { return _specyfikation; }
         }
 
         private long _cores;
+
         public string Cores
         {
             get { return _cores.ToString(); }
         }
 
         private long _threds;
+
         public string Threds
         {
             get { return _threds.ToString(); }

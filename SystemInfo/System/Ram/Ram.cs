@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Management;
 
 namespace SystemInfo
@@ -11,24 +7,28 @@ namespace SystemInfo
     public class Ram : SystemComponent
     {
         private string _bank = string.Empty;
+
         public string Bank
         {
             get { return _bank; }
         }
 
         private long _capacity = 0;
+
         public float Capacity
         {
             get { return Units.BitesToGigabites(_capacity); }
         }
 
         private RamType _type;
+
         public RamType Type
         {
             get { return _type; }
         }
 
         private long _speed = 0;
+
         public long Speed
         {
             get { return _speed; }
@@ -47,6 +47,7 @@ namespace SystemInfo
             {
                 case 24:
                     return RamType.DDR3;
+
                 case 26:
                     return RamType.DDR4;
             }

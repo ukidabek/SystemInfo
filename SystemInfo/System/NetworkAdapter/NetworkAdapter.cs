@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Management;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SystemInfo
 {
@@ -11,12 +7,14 @@ namespace SystemInfo
     public class NetworkAdapter : SystemComponent
     {
         private string _name = string.Empty;
+
         public string Name
         {
             get { return _name; }
         }
 
         private string _netConnectionID = string.Empty;
+
         public string NetConnectionID
         {
             get { return _netConnectionID; }

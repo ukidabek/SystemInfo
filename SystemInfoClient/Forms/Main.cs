@@ -34,7 +34,8 @@ namespace SystemInfoClient
 
         private void config_Click(object sender, EventArgs e)
         {
-
+            Config configuration = new Config();
+            configuration.ShowDialog();
         }
     }
 }

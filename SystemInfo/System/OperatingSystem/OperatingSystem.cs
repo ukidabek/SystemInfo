@@ -1,22 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Management;
 
 namespace SystemInfo
 {
     [Serializable]
-    class OperatingSystem : SystemComponent
+    internal class OperatingSystem : SystemComponent
     {
         private string _caption = string.Empty;
+
         public string Caption
         {
             get { return _caption; }
         }
 
         private string _oSArchitecture = string.Empty;
+
         public string OsArchitecture
         {
             get { return _oSArchitecture; }
