@@ -43,6 +43,14 @@
   <ItemGroup>
     <Compile Include="GraphicCard\GraphicCard.cs" />
     <Compile Include="GraphicCard\GraphicCardInformation.cs" />
+    <Compile Include="HardDisks\HardDisk.cs" />
+    <Compile Include="HardDisks\hardDiskInformation.cs" />
+    <Compile Include="Motherboard\Motherboard.cs" />
+    <Compile Include="Motherboard\MotherboardInformation.cs" />
+    <Compile Include="NetworkAdapter\NetworkAdapter.cs" />
+    <Compile Include="NetworkAdapter\NetworkAdapterInformation.cs" />
+    <Compile Include="OperatingSystem\OperatingSystem.cs" />
+    <Compile Include="OperatingSystem\OperatingSystemInformation.cs" />
     <Compile Include="Processor\Processor.cs" />
     <Compile Include="Processor\ProcessorInformation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -53,6 +61,7 @@
     <Compile Include="SystemComponentInformation.cs" />
     <Compile Include="SystemInformation.cs" />
     <Compile Include="Units.cs" />
+    <Compile Include="Utilities.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

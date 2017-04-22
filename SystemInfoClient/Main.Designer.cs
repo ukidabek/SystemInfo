@@ -37,20 +37,19 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ramInfo = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.motherboardInfo = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.hardDisksInfo = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.operatingSystemInfo = new System.Windows.Forms.TextBox();
+            this.sendInfo = new System.Windows.Forms.Button();
+            this.config = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.processorBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,7 +115,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox4);
+            this.groupBox4.Controls.Add(this.motherboardInfo);
             this.groupBox4.Location = new System.Drawing.Point(12, 240);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(310, 70);
@@ -124,19 +123,19 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Motherboard";
             // 
-            // textBox4
+            // motherboardInfo
             // 
-            this.textBox4.AllowDrop = true;
-            this.textBox4.Location = new System.Drawing.Point(6, 19);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox4.Size = new System.Drawing.Size(296, 45);
-            this.textBox4.TabIndex = 3;
+            this.motherboardInfo.AllowDrop = true;
+            this.motherboardInfo.Location = new System.Drawing.Point(6, 19);
+            this.motherboardInfo.Multiline = true;
+            this.motherboardInfo.Name = "motherboardInfo";
+            this.motherboardInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.motherboardInfo.Size = new System.Drawing.Size(296, 45);
+            this.motherboardInfo.TabIndex = 3;
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox5);
+            this.groupBox5.Controls.Add(this.hardDisksInfo);
             this.groupBox5.Location = new System.Drawing.Point(12, 316);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(310, 70);
@@ -144,64 +143,65 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Hard disk";
             // 
-            // textBox5
+            // hardDisksInfo
             // 
-            this.textBox5.AllowDrop = true;
-            this.textBox5.Location = new System.Drawing.Point(6, 19);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox5.Size = new System.Drawing.Size(296, 45);
-            this.textBox5.TabIndex = 4;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.textBox6);
-            this.groupBox6.Location = new System.Drawing.Point(12, 392);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(310, 70);
-            this.groupBox6.TabIndex = 10;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Network adapter";
-            // 
-            // textBox6
-            // 
-            this.textBox6.AllowDrop = true;
-            this.textBox6.Location = new System.Drawing.Point(6, 19);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox6.Size = new System.Drawing.Size(296, 45);
-            this.textBox6.TabIndex = 5;
+            this.hardDisksInfo.AllowDrop = true;
+            this.hardDisksInfo.Location = new System.Drawing.Point(6, 19);
+            this.hardDisksInfo.Multiline = true;
+            this.hardDisksInfo.Name = "hardDisksInfo";
+            this.hardDisksInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.hardDisksInfo.Size = new System.Drawing.Size(296, 45);
+            this.hardDisksInfo.TabIndex = 4;
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.textBox7);
-            this.groupBox7.Location = new System.Drawing.Point(12, 468);
+            this.groupBox7.Controls.Add(this.operatingSystemInfo);
+            this.groupBox7.Location = new System.Drawing.Point(12, 392);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(310, 70);
             this.groupBox7.TabIndex = 11;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Operating system";
             // 
-            // textBox7
+            // operatingSystemInfo
             // 
-            this.textBox7.AllowDrop = true;
-            this.textBox7.Location = new System.Drawing.Point(6, 19);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox7.Size = new System.Drawing.Size(296, 45);
-            this.textBox7.TabIndex = 6;
+            this.operatingSystemInfo.AllowDrop = true;
+            this.operatingSystemInfo.Location = new System.Drawing.Point(6, 19);
+            this.operatingSystemInfo.Multiline = true;
+            this.operatingSystemInfo.Name = "operatingSystemInfo";
+            this.operatingSystemInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.operatingSystemInfo.Size = new System.Drawing.Size(296, 45);
+            this.operatingSystemInfo.TabIndex = 6;
+            // 
+            // sendInfo
+            // 
+            this.sendInfo.Location = new System.Drawing.Point(18, 469);
+            this.sendInfo.Name = "sendInfo";
+            this.sendInfo.Size = new System.Drawing.Size(150, 23);
+            this.sendInfo.TabIndex = 12;
+            this.sendInfo.Text = "button1";
+            this.sendInfo.UseVisualStyleBackColor = true;
+            this.sendInfo.Click += new System.EventHandler(this.sendInfo_Click);
+            // 
+            // config
+            // 
+            this.config.Location = new System.Drawing.Point(174, 469);
+            this.config.Name = "config";
+            this.config.Size = new System.Drawing.Size(150, 23);
+            this.config.TabIndex = 13;
+            this.config.Text = "button1";
+            this.config.UseVisualStyleBackColor = true;
+            this.config.Click += new System.EventHandler(this.config_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(343, 504);
+            this.ClientSize = new System.Drawing.Size(343, 503);
+            this.Controls.Add(this.config);
+            this.Controls.Add(this.sendInfo);
             this.Controls.Add(this.groupBox7);
-            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -220,8 +220,6 @@
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
@@ -238,13 +236,13 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox ramInfo;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox motherboardInfo;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox hardDisksInfo;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox operatingSystemInfo;
+        private System.Windows.Forms.Button sendInfo;
+        private System.Windows.Forms.Button config;
     }
 }
 

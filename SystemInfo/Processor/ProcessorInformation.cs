@@ -12,21 +12,6 @@ namespace SystemInfo
     {
         protected override string ComponentCode { get { return "win32_processor"; } }
 
-        public override string Informatioin
-        {
-            get
-            {
-                string information = string.Empty;
-
-                for (int i = 0; i < _componets.Count; i++)
-                {
-                    information += _componets[i].Informatioin;
-                }
-
-                return information;
-            }
-        }
-
         protected override void GetComponet()
         {
             ManagementObjectCollection managmentObjects = ManagementClass.GetInstances();

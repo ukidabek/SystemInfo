@@ -8,9 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using SystemInfo;
-
-
 namespace SystemInfoClient
 {
     public partial class Main : Form
@@ -24,6 +21,20 @@ namespace SystemInfoClient
             processorInfo.DataBindings.Add("Text", _info.Processor, "Informatioin");
             ramInfo.DataBindings.Add("Text", _info.Ram, "Informatioin");
             graphicCardInfo.DataBindings.Add("Text", _info.GraphicCard, "Informatioin");
+            motherboardInfo.DataBindings.Add("Text", _info.Matherboard, "Informatioin");
+            hardDisksInfo.DataBindings.Add("Text", _info.HardDisks, "Informatioin");
+            //networkAdapterInfo.DataBindings.Add("Text", _info.NewtworkAdapters, "Informatioin");
+            operatingSystemInfo.DataBindings.Add("Text", _info.OperatingSystem, "Informatioin");
+        }
+
+        private void sendInfo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void config_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

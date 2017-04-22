@@ -8,17 +8,17 @@ using System.Management;
 namespace SystemInfo
 {
     [Serializable]
-    public class GraphicCardInformation : SystemComponentInformation
+    public class HardDiskInformation : SystemComponentInformation
     {
-        protected override string ComponentCode { get { return "Win32_VideoController"; } }
+        protected override string ComponentCode { get { return "Win32_DiskDrive"; } }
 
         protected override void GetComponet()
         {
             ManagementObjectCollection managmentObjects = ManagementClass.GetInstances();
             foreach (ManagementObject item in managmentObjects)
             {
-                GraphicCard gpu = new GraphicCard(item);
-                _componets.Add(gpu);
+                HardDisk mbo = new HardDisk(item);
+                _componets.Add(mbo);
             }
         }
     }

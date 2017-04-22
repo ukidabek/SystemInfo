@@ -31,7 +31,19 @@ namespace SystemInfo
             get { return _componets; }
         }
 
-        public abstract string Informatioin { get; }
+        public virtual string Informatioin
+        {
+            get
+            {
+                string information = string.Empty;
+                for (int i = 0; i < _componets.Count; i++)
+                {
+                    information += _componets[i].Informatioin;
+                }
+
+                return information;
+            }
+        }
 
         public SystemComponentInformation()
         {
