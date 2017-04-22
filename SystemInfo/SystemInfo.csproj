@@ -41,11 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Processor.cs" />
+    <Compile Include="GraphicCard\GraphicCard.cs" />
+    <Compile Include="GraphicCard\GraphicCardInformation.cs" />
+    <Compile Include="Processor\Processor.cs" />
+    <Compile Include="Processor\ProcessorInformation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ram.cs" />
-    <Compile Include="RamType.cs" />
+    <Compile Include="Ram\Ram.cs" />
+    <Compile Include="Ram\RamInformation.cs" />
+    <Compile Include="Ram\RamType.cs" />
     <Compile Include="SystemComponent.cs" />
+    <Compile Include="SystemComponentInformation.cs" />
     <Compile Include="SystemInformation.cs" />
     <Compile Include="Units.cs" />
   </ItemGroup>

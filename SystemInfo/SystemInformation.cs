@@ -9,30 +9,24 @@ namespace SystemInfo
     [Serializable]
     public class SystemInformation
     {
-        private List<SystemComponent> _componets = new List<SystemComponent>();
+        private List<SystemComponentInformation> _componets = new List<SystemComponentInformation>();
 
-        private Processor _processor = new Processor();
-        public Processor Processor
+        private ProcessorInformation _processor = new ProcessorInformation();
+        public ProcessorInformation Processor
         {
             get { return _processor; }
         }
 
-        private Ram _ram = new Ram();
-        public Ram Ram
+        private RamInformation _ram = new RamInformation();
+        public RamInformation Ram
         {
             get { return _ram; }
         }
 
-        public SystemInformation()
+        private GraphicCardInformation _graphicCard = new GraphicCardInformation();
+        public GraphicCardInformation GraphicCard
         {
-            _componets.Add(_processor);
-            _componets.Add(_ram);
-
-            for (int i = 0; i < _componets.Count; i++)
-            {
-                SystemComponent componet = _componets[i];
-                componet.GetComponentInfo();
-            }
+            get { return _graphicCard; }
         }
     }
 }

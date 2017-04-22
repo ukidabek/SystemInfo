@@ -9,27 +9,8 @@ namespace SystemInfo
 {
     public abstract class SystemComponent
     {
-        protected abstract string ComponentCode { get; }
+        public abstract string Informatioin { get; }
 
-        private ManagementClass managementClass = null;
-        protected ManagementClass ManagementClass
-        {
-            get
-            {
-                if(managementClass == null)
-                {
-                    managementClass = new ManagementClass(ComponentCode);
-                }
-
-                return managementClass;
-            }
-        }
-
-        protected ManagementObjectCollection ManagementObjectCollection
-        {
-            get { return ManagementClass.GetInstances();}
-        }
-
-        public abstract void GetComponentInfo();
+        public SystemComponent(ManagementObject managementObject) {}
     }
 }
