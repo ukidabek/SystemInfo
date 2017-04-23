@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Management;
+using System;
 
 namespace SystemInfo
 {
+    [Serializable]
     public abstract class SystemComponentInformation
     {
         protected abstract string ComponentCode { get; }

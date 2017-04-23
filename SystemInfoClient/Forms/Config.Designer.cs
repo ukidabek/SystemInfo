@@ -31,9 +31,11 @@
             this.ip = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.name = new System.Windows.Forms.TextBox();
             this.cancel = new System.Windows.Forms.Button();
             this.apply = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.port = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ip
@@ -55,22 +57,22 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 38);
+            this.label2.Location = new System.Drawing.Point(12, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Name";
             // 
-            // textBox1
+            // name
             // 
-            this.textBox1.Location = new System.Drawing.Point(53, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(219, 20);
-            this.textBox1.TabIndex = 3;
+            this.name.Location = new System.Drawing.Point(53, 65);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(219, 20);
+            this.name.TabIndex = 3;
             // 
             // cancel
             // 
-            this.cancel.Location = new System.Drawing.Point(197, 64);
+            this.cancel.Location = new System.Drawing.Point(197, 91);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(75, 23);
             this.cancel.TabIndex = 4;
@@ -80,21 +82,40 @@
             // 
             // apply
             // 
-            this.apply.Location = new System.Drawing.Point(116, 64);
+            this.apply.Location = new System.Drawing.Point(116, 91);
             this.apply.Name = "apply";
             this.apply.Size = new System.Drawing.Size(75, 23);
             this.apply.TabIndex = 5;
             this.apply.Text = "Apply";
             this.apply.UseVisualStyleBackColor = true;
+            this.apply.Click += new System.EventHandler(this.apply_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(26, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Port";
+            // 
+            // port
+            // 
+            this.port.Location = new System.Drawing.Point(53, 39);
+            this.port.Name = "port";
+            this.port.Size = new System.Drawing.Size(219, 20);
+            this.port.TabIndex = 6;
             // 
             // Config
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 96);
+            this.ClientSize = new System.Drawing.Size(279, 126);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.port);
             this.Controls.Add(this.apply);
             this.Controls.Add(this.cancel);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.name);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ip);
@@ -110,8 +131,10 @@
         private System.Windows.Forms.TextBox ip;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.Button apply;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox port;
     }
 }

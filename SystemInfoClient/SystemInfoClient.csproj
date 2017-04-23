@@ -57,6 +57,7 @@
     <Compile Include="Forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Networking\ServerAdressConfig.cs" />
     <Compile Include="SystemInfoClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Config.resx">
@@ -88,13 +89,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Networning\Networning.csproj">
+      <Project>{1ba92229-0890-4685-b623-c37f517b7dd9}</Project>
+      <Name>Networning</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SystemInfo\SystemInfo.csproj">
       <Project>{6973f60d-1428-438a-a2f0-5205d3078f05}</Project>
       <Name>SystemInfo</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Networking\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

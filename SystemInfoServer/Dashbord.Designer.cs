@@ -1,6 +1,6 @@
 ﻿namespace SystemInfoServer
 {
-    partial class Form1
+    partial class Dashbord
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -28,12 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.log = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // log
+            // 
+            this.log.Location = new System.Drawing.Point(13, 13);
+            this.log.Multiline = true;
+            this.log.Name = "log";
+            this.log.Size = new System.Drawing.Size(201, 436);
+            this.log.TabIndex = 0;
+            // 
+            // Dashbord
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.log);
+            this.Name = "Dashbord";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox log;
     }
 }
 

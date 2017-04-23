@@ -4,7 +4,7 @@ using System.Management;
 namespace SystemInfo
 {
     [Serializable]
-    internal class OperatingSystem : SystemComponent
+    public class OperatingSystem : SystemComponent
     {
         private string _caption = string.Empty;
 

@@ -4,7 +4,7 @@ using System.Management;
 namespace SystemInfo
 {
     [Serializable]
-    internal class HardDisk : SystemComponent
+    public class HardDisk : SystemComponent
     {
         private string _model = string.Empty;
 

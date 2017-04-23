@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Windows.Forms;
+using Networning; 
 
 namespace SystemInfoServer
 {
     internal static class SystemInfoServer
     {
+        private static Server _server = new Server();
         /// <summary>
         /// Główny punkt wejścia dla aplikacji.
         /// </summary>
@@ -13,7 +15,7 @@ namespace SystemInfoServer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Dashbord(_server));
         }
     }
 }

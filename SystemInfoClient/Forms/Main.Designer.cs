@@ -179,7 +179,7 @@
             this.sendInfo.Name = "sendInfo";
             this.sendInfo.Size = new System.Drawing.Size(150, 23);
             this.sendInfo.TabIndex = 12;
-            this.sendInfo.Text = "button1";
+            this.sendInfo.Text = "Send";
             this.sendInfo.UseVisualStyleBackColor = true;
             this.sendInfo.Click += new System.EventHandler(this.sendInfo_Click);
             // 
@@ -189,7 +189,7 @@
             this.config.Name = "config";
             this.config.Size = new System.Drawing.Size(150, 23);
             this.config.TabIndex = 13;
-            this.config.Text = "button1";
+            this.config.Text = "Configuration";
             this.config.UseVisualStyleBackColor = true;
             this.config.Click += new System.EventHandler(this.config_Click);
             // 

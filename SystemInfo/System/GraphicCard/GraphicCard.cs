@@ -4,7 +4,7 @@ using System.Management;
 namespace SystemInfo
 {
     [Serializable]
-    internal class GraphicCard : SystemComponent
+    public class GraphicCard : SystemComponent
     {
         private string _manufacturer = string.Empty;
 

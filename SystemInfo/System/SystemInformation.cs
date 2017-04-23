@@ -6,8 +6,6 @@ namespace SystemInfo
     [Serializable]
     public class SystemInformation
     {
-        private List<SystemComponentInformation> _componets = new List<SystemComponentInformation>();
-
         private ProcessorInformation _processor = new ProcessorInformation();
 
         public ProcessorInformation Processor
