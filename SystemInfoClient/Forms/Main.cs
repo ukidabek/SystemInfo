@@ -31,16 +31,10 @@ namespace SystemInfoClient
 
         private void sendInfo_Click(object sender, EventArgs e)
         {
-            //Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-            //byte[] xx = System.Text.Encoding.ASCII.GetBytes("Ale ma kota, a ktot ma ale.");
-            //IPAddress ip = IPAddress.Parse(_serverAdress.IP);
-            //int port = _serverAdress.Port;
-            //IPEndPoint endPoint = new IPEndPoint(ip, port);
-            //s.SendTo(xx, endPoint);
-
+            //_info
             _client.IPAdress = _serverAdress.IP;
             _client.Port = _serverAdress.Port;
-
+            _client.Initialize();
             _client.Send(_info);
         }
 

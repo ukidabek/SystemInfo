@@ -25,6 +25,8 @@ namespace SystemInfo
             get { return string.Format("{0} {1}\r\n", _name, _netConnectionID); }
         }
 
+        public override string CSVInformatioin => throw new NotImplementedException();
+
         public NetworkAdapter(ManagementObject managementObject) : base(managementObject)
         {
             string a = Utilities.GetAllPropertisInfo(managementObject);

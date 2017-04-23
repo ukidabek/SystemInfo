@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Net.Sockets;
 
 namespace Networning
 {
@@ -12,13 +13,16 @@ namespace Networning
     {
         public void Send(object objectToSend)
         {
-            MemoryStream stram = new MemoryStream();
 
+            MemoryStream stram = new MemoryStream();
             BinaryFormatter f = new BinaryFormatter();
             f.Serialize(stram, objectToSend);
-
+            stram.Position = 0;
             byte[] x = stram.ToArray();
-            _socket.SendTo(x, IP);
+
+            _socket.Connect(IP);
+            _socket.Send(x);
+            _socket.Close();
         }
     }
 }

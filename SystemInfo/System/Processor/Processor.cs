@@ -39,6 +39,11 @@ namespace SystemInfo
             get { return string.Format("{0}\r\n", Specyfikation); }
         }
 
+        public override string CSVInformatioin
+        {
+            get { return string.Format("{0} ", Specyfikation); }
+        }
+
         public Processor(ManagementObject managementObject)
             : base(managementObject)
         {

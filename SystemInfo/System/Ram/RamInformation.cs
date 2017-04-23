@@ -40,5 +40,10 @@ namespace SystemInfo
                 _componets.Add(ram);
             }
         }
+
+        public override string ToCSV()
+        {
+            return string.Format("{0}GB of {1} runing at {2}Mhz", _totalCapacity, _type, _speed);
+        }
     }
 }

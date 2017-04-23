@@ -25,19 +25,13 @@ namespace SystemInfo
             get { return string.Format("{0} {1}GB\r\n", _model, _size); }
         }
 
+        public override string CSVInformatioin
+        {
+            get { return string.Format("{0} {1}GB ", _model, _size); }
+        }
+
         public HardDisk(ManagementObject managementObject) : base(managementObject)
         {
-            //string a = string.Empty;
-            //foreach (PropertyData item in managementObject.Properties)
-            //{
-            //    if (item.Value == null)
-            //        continue;
-
-            //    a += string.Format("{0} {1}\r\n", item.Name, item.Value.ToString());
-            //}
-
-            //int aa = 5;
-
             _model = managementObject.Properties["Model"].Value.ToString();
             long size = Convert.ToInt64(managementObject.Properties["Size"].Value);
             _size = Units.BitesToGigabites(size);

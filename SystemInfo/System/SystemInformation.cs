@@ -6,6 +6,13 @@ namespace SystemInfo
     [Serializable]
     public class SystemInformation
     {
+        private string _owener = string.Empty;
+        public string Owner
+        {
+            get { return _owener; }
+            set { _owener = value; }
+        }
+
         private ProcessorInformation _processor = new ProcessorInformation();
 
         public ProcessorInformation Processor
@@ -52,6 +59,18 @@ namespace SystemInfo
         public OperatingSystemInformation OperatingSystem
         {
             get { return _operatingSystem; }
+        }
+
+        public string ToCSV()
+        {
+            return string.Format("{0};{1};{2};{3};{4};{5};{6};",
+                Owner,
+                Processor.ToCSV(),
+                Ram.ToCSV(),
+                GraphicCard.ToCSV(),
+                Matherboard.ToCSV(),
+                HardDisks.ToCSV(),
+                OperatingSystem.ToCSV());
         }
     }
 }

@@ -9,6 +9,7 @@ namespace SystemInfo
     {
         protected abstract string ComponentCode { get; }
 
+        [NonSerialized]
         private ManagementClass managementClass = null;
 
         protected ManagementClass ManagementClass
@@ -51,5 +52,16 @@ namespace SystemInfo
         }
 
         protected abstract void GetComponet();
+
+        public virtual string ToCSV()
+        {
+            string csv = string.Empty;
+            for (int i = 0; i < _componets.Count; i++)
+            {
+                csv += string.Format("{0} ", _componets[i].CSVInformatioin);
+            }
+
+            return csv;
+        }
     }
 }

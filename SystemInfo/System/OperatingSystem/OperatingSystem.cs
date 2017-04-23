@@ -25,6 +25,11 @@ namespace SystemInfo
             get { return string.Format("{0} {1}\r\n", _caption, _oSArchitecture); }
         }
 
+        public override string CSVInformatioin
+        {
+            get { return string.Format("{0} {1}", _caption, _oSArchitecture); }
+        }
+
         public OperatingSystem(ManagementObject managementObject) : base(managementObject)
         {
             _caption = managementObject.Properties["Caption"].Value.ToString();

@@ -1,6 +1,6 @@
 ﻿public enum RamType
 {
-    Unknown,
-    DDR3,
-    DDR4
+    Unknown = 0,
+    DDR3 = 10,
+    DDR4 = 20
 }

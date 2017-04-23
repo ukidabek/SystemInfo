@@ -29,6 +29,11 @@ namespace SystemInfo
 
         public override string Informatioin
         {
+            get { return string.Format("{2} {0} {1}GB\r\n", _model, _memory, _manufacturer); }
+        }
+
+        public override string CSVInformatioin
+        {
             get { return string.Format("{2} {0} {1}GB", _model, _memory, _manufacturer); }
         }
 

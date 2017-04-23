@@ -39,6 +39,11 @@ namespace SystemInfo
             get { return string.Format("{0}: {1}GB of {2} runing at {3}Mhz\r\n", Bank, Capacity, Type, Speed); }
         }
 
+        public override string CSVInformatioin
+        {
+            get { return string.Format("{0}: {1}GB of {2} runing at {3}Mhz", Bank, Capacity, Type, Speed); }
+        }
+
         public static RamType GetRamType(object type)
         {
             long typeID = Convert.ToInt64(type);

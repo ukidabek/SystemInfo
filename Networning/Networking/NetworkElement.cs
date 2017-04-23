@@ -11,8 +11,8 @@ namespace Networning
     public class NetworkElement
     {
         public AddressFamily AddressFamily = AddressFamily.InterNetwork;
-        public SocketType SocketType = SocketType.Dgram;
-        public ProtocolType ProtocolType = ProtocolType.Udp;
+        public SocketType SocketType = SocketType.Stream;
+        public ProtocolType ProtocolType = ProtocolType.Tcp;
 
         public string IPAdress = string.Empty;
         public int Port = 7777;
@@ -44,7 +44,7 @@ namespace Networning
 
         protected Socket _socket = null;
 
-        public NetworkElement()
+        public void Initialize()
         {
             _socket = new Socket(AddressFamily, SocketType, ProtocolType);
         }

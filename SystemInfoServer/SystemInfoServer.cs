@@ -7,6 +7,7 @@ namespace SystemInfoServer
     internal static class SystemInfoServer
     {
         private static Server _server = new Server();
+        private static SystemInformationContainer _container = new SystemInformationContainer();
         /// <summary>
         /// Główny punkt wejścia dla aplikacji.
         /// </summary>
@@ -15,7 +16,8 @@ namespace SystemInfoServer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Dashbord(_server));
+            _server.Initialize();
+            Application.Run(new Dashbord(_server, _container));
         }
     }
 }

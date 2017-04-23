@@ -19,7 +19,7 @@ namespace SystemInfoClient
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             _serverAdress = ServerAdressConfig.LoadConfig(ServerAdressConfig.Server_Adress_Congig_File_Name);
-
+            _info.Owner = _serverAdress.Name;
             Main newMainWindow = new Main(_info, _serverAdress,_client);
             Application.Run(newMainWindow);
         }

@@ -25,6 +25,11 @@ namespace SystemInfo
             get { return string.Format("{0} {1}\r\n", _manufacturer, _product); }
         }
 
+        public override string CSVInformatioin
+        {
+            get { return string.Format("{0} {1}", _manufacturer, _product); }
+        }
+
         public Motherboard(ManagementObject managementObject) : base(managementObject)
         {
             _manufacturer = managementObject.Properties["Manufacturer"].Value.ToString();

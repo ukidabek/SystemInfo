@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Networking\Client.cs" />
+    <Compile Include="Networking\Conection.cs" />
     <Compile Include="Networking\ISentReceive.cs" />
     <Compile Include="Networking\NetworkElement.cs" />
     <Compile Include="Networking\Server.cs" />

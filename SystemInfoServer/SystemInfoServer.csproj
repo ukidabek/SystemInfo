@@ -51,6 +51,7 @@
     <Compile Include="Dashbord.Designer.cs">
       <DependentUpon>Dashbord.cs</DependentUpon>
     </Compile>
+    <Compile Include="SystemInformationContainer.cs" />
     <Compile Include="SystemInfoServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Dashbord.resx">
@@ -82,6 +83,10 @@
     <ProjectReference Include="..\Networning\Networning.csproj">
       <Project>{1ba92229-0890-4685-b623-c37f517b7dd9}</Project>
       <Name>Networning</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SystemInfo\SystemInfo.csproj">
+      <Project>{6973f60d-1428-438a-a2f0-5205d3078f05}</Project>
+      <Name>SystemInfo</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
