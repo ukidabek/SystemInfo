@@ -29,37 +29,39 @@
         private void InitializeComponent()
         {
             this.log = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.generateCSV = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // log
             // 
-            this.log.Location = new System.Drawing.Point(13, 13);
+            this.log.Location = new System.Drawing.Point(12, 201);
             this.log.Multiline = true;
             this.log.Name = "log";
             this.log.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.log.Size = new System.Drawing.Size(384, 310);
+            this.log.Size = new System.Drawing.Size(660, 148);
             this.log.TabIndex = 0;
             // 
-            // button1
+            // generateCSV
             // 
-            this.button1.Location = new System.Drawing.Point(13, 329);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.generateCSV.Location = new System.Drawing.Point(584, 12);
+            this.generateCSV.Name = "generateCSV";
+            this.generateCSV.Size = new System.Drawing.Size(88, 23);
+            this.generateCSV.TabIndex = 1;
+            this.generateCSV.Text = "Generate CSV";
+            this.generateCSV.UseVisualStyleBackColor = true;
+            this.generateCSV.Click += new System.EventHandler(this.button1_Click);
             // 
             // Dashbord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 358);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(684, 361);
+            this.Controls.Add(this.generateCSV);
             this.Controls.Add(this.log);
             this.Name = "Dashbord";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dashbord_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Dashbord_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -68,7 +70,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox log;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button generateCSV;
     }
 }
 

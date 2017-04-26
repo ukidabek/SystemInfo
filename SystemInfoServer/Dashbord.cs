@@ -1,5 +1,7 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using Networning;
+using SystemInfo;
 
 namespace SystemInfoServer
 {
@@ -26,7 +28,6 @@ namespace SystemInfoServer
             server.StartServer();
 
             InitializeComponent();
-
         }
 
         public void Log(string log)
@@ -49,5 +50,14 @@ namespace SystemInfoServer
             _container.GenerateCSV();
         }
 
+        private void Dashbord_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _server.StopServer();
+        }
+
+        private void Dashbord_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

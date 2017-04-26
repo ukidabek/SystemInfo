@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-using Networning; 
+using Networning;
+using SystemInfo;
 
 namespace SystemInfoServer
 {

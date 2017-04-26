@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using SystemInfo;
 
 namespace SystemInfoClient
 {
@@ -28,6 +29,13 @@ namespace SystemInfoClient
         {
             get { return _name; }
             set { _name = value; }
+        }
+
+        private SystemUser _user = null;
+        public SystemUser User
+        {
+            get { return _user; }
+            set { _user = value; }
         }
 
         public static ServerAdressConfig LoadConfig(string path)

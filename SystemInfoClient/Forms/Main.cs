@@ -42,6 +42,7 @@ namespace SystemInfoClient
         {
             Config configuration = new Config(_serverAdress, ServerAdressConfig.Server_Adress_Congig_File_Name);
             configuration.ShowDialog();
+            _info.Owner = _serverAdress.Name;
         }
 
 

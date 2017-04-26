@@ -52,7 +52,6 @@
     <Compile Include="Dashbord.Designer.cs">
       <DependentUpon>Dashbord.cs</DependentUpon>
     </Compile>
-    <Compile Include="SystemInformationContainer.cs" />
     <Compile Include="SystemInfoServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Dashbord.resx">
