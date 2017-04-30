@@ -11,6 +11,7 @@ namespace SystemInfo
         protected override void GetComponet()
         {
             ManagementObjectCollection managmentObjects = ManagementClass.GetInstances();
+
             foreach (ManagementObject item in managmentObjects)
             {
                 Processor cpu = new Processor(item);

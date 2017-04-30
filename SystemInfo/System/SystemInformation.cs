@@ -7,11 +7,11 @@ namespace SystemInfo
     [Serializable]
     public class SystemInformation
     {
-        //private string _id = string.Empty;
+        private string _id = string.Empty;
         public string ID
         {
-            get;
-            set;
+            get { return _id; }
+            set { _id = value; }
         }
 
         private string _userID = string.Empty;
@@ -83,6 +83,12 @@ namespace SystemInfo
         public OperatingSystemInformation OperatingSystem
         {
             get { return _operatingSystem; }
+        }
+
+        public SystemInformation()
+        {
+            Motherboard _motherboard = (Motherboard)_matherboard.Componets[0];
+            ID = _motherboard.SerialNumber;
         }
 
         public string ToCSV()

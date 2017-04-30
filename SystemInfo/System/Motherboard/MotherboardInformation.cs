@@ -28,6 +28,7 @@ namespace SystemInfo
             foreach (ManagementObject item in managmentObjects)
             {
                 Motherboard mbo = new Motherboard(item);
+
                 _componets.Add(mbo);
             }
         }

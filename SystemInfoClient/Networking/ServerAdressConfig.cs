@@ -49,9 +49,7 @@ namespace SystemInfoClient
             }
 
             BinaryFormatter formatter = new BinaryFormatter();
-            Stream networkConfigFile = File.Open(
-                 path,
-                 FileMode.Open);
+            Stream networkConfigFile = File.Open(path, FileMode.Open);
 
             serverAdress = (ServerAdressConfig)formatter.Deserialize(networkConfigFile);
             networkConfigFile.Close();
@@ -62,9 +60,7 @@ namespace SystemInfoClient
         public static void SaveConfig(string path, ServerAdressConfig serverAdress)
         {
             BinaryFormatter formatter = new BinaryFormatter();
-            Stream networkConfigFile = File.Open(
-                        path,
-                        FileMode.Create);
+            Stream networkConfigFile = File.Open(path, FileMode.Create);
 
             formatter.Serialize(networkConfigFile, serverAdress);
             networkConfigFile.Close();

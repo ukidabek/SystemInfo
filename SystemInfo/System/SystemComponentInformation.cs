@@ -11,7 +11,6 @@ namespace SystemInfo
 
         [NonSerialized]
         private ManagementClass managementClass = null;
-
         protected ManagementClass ManagementClass
         {
             get
@@ -26,7 +25,6 @@ namespace SystemInfo
         }
 
         protected List<SystemComponent> _componets = new List<SystemComponent>();
-
         public List<SystemComponent> Componets
         {
             get { return _componets; }

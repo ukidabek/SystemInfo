@@ -7,17 +7,21 @@ namespace SystemInfo
     public class Motherboard : SystemComponent
     {
         private string _manufacturer = string.Empty;
-
         public string Manufacturer
         {
             get { return _manufacturer; }
         }
 
         private string _product = string.Empty;
-
         public string Product
         {
             get { return _product; }
+        }
+
+        private string _serialNumber = string.Empty;
+        public string SerialNumber
+        {
+            get { return _serialNumber; }
         }
 
         public override string Informatioin
@@ -34,6 +38,7 @@ namespace SystemInfo
         {
             _manufacturer = managementObject.Properties["Manufacturer"].Value.ToString();
             _product = managementObject.Properties["Product"].Value.ToString();
+            _serialNumber = managementObject.Properties["SerialNumber"].Value.ToString();
         }
     }
 }
